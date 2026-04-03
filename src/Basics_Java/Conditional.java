@@ -84,7 +84,6 @@ public class Conditional {
 //            System.out.println("name is a Not String type");
 //
 //        }
-//
 //        // 8️⃣ Nested condition (gender + age)
 //        int ageOfPerson = 22;
 //        char gender = 'M';
