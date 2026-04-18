@@ -146,11 +146,107 @@ public class Pattern {
 //            }
 //            System.out.println();
 //        }
+////        int n = 5;
+//        for (int row = 1; row <= n; row++) {
+//            for (int col = 1; col <= row; col++) {
+//                System.out.print((char)(64+col)+" ");
+//            }
+//            System.out.println();
+//        }
+
+//        int n  = 5;
+//        for (int row = 1; row <=n ; row++) {
+//            for (int col = 1; col <= row; col++) {
+//                int a = n-col;
+//                int b = 'A';
+//                int ans = a+b;
+//                char finalAns = (char)ans;
+//                System.out.print(finalAns);
+//            }
+//            System.out.println();
+//        }
+
+//        int n = 5;
+//        for (int row = 1; row <=n; row++) {
+//            for (int col = 1; col <= row-1; col++) {
+////                if(row == n) continue;
+//                System.out.print(" "+" ");
+//            }
+//            System.out.println();
+//
+//            for (int col = 1; col <=2*(n-row)+1 ; col++) {
+//                System.out.print("*"+" ");
+//            }
+//        }
+//        for (int row = 2; row <=n; row++) {
+//            for (int col = 1; col <= n-row; col++) {
+//
+//                System.out.print(" "+" ");
+//            }
+//            for (int col = 1; col <=2*row-1 ; col++) {
+//                System.out.print("*"+" ");
+//            }
+//            System.out.println();
+//
+//        }
+
+//        int n = 5;
+//        for (int row = 1; row <=n ; row++) {
+//            if(row == 1||row==n){
+//                for (int col = 1; col <= 6; col++) {
+//                    System.out.print("* ");
+//                }
+//            }
+//            else {
+//
+//                for (int col = 1; col <=6; col++) {
+//                    if(col == 1 ||col == 6){
+//                        System.out.print("* ");
+//                    }else {
+//                        System.out.print("  ");
+//                    }
+//                }
+//            }
+//            System.out.println();
+//        }
+//        int n = 5;
+//        for (int row = 1; row <= n; row++) {
+//            for (int col = 1; col <= row; col++) {
+//                if(row == 1|| row == n || col == 1||col ==row){
+//                    System.out.print("* ");
+//                }
+//                else{
+//                        System.out.print("  ");
+//                }
+//            }
+//            System.out.println();
+//        }
+
+//        int n =4;
+//        for (int row = 1; row <= n; row++) {
+//
+//            for (int col = 1; col <= row-1; col++) {
+//                System.out.print("  ");
+//            }
+//
+//            for (int col = 1; col <= 2*n-(2*row-1); col++) {
+//                System.out.print("* ");
+//            }
+//            System.out.println();
+//        }
         int n = 5;
         for (int row = 1; row <= n; row++) {
-            for (int col = 1; col <= row; col++) {
-                System.out.print((char)(64+col)+" ");
+            for (int col = 1; col <= n-row; col++) {
+                System.out.print("  ");
             }
+            for (int col = 1; col <=2*row-1; col++) {
+                if(row == 1||row==n||col ==1||col==2*row-1){
+                    System.out.print("* ");
+                }else {
+                    System.out.print("  ");
+                }
+            }
+
             System.out.println();
         }
     }
