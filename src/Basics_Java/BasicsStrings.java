@@ -79,7 +79,52 @@ public class BasicsStrings {
         }
         return true;
     }
+
+    static int consonants(String str){
+        int n = str.length();
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            char ch = Character.toLowerCase(str.charAt(i));
+            if(Character.isLetter(ch)&&ch != 'a'&& ch != 'e'&&ch != 'i'&&ch != 'o'&&ch!='u'){
+                count++;
+            }
+        }
+        return count;
+    }
+    static String upperCase(String str){
+        char[] ch = str.toCharArray();
+        for (char i = 0; i < ch.length; i++) {
+          if(ch[i] >= 'a'&&ch[i]<='z'){
+                ch[i] = (char) (ch[i] - 32);
+          }
+        }
+        return new String(ch);
+    }
+    static int wordsSentence(String str){
+        int n = str.length();
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            char ch = str.charAt(i);
+            if(ch >='a'&&ch<='z'){
+                count++;
+            }
+        }
+        return count;
+    }
+    static boolean containsDigit(String str){
+        int n = str.length();
+        for (int i = 0; i < n; i++) {
+            char ch = str.charAt(i);
+            if(ch >= 0&&ch<=9){
+                return true;
+            }
+        }
+        return false;
+    }
     public static void main(String[] args) {
+        System.out.println(wordsSentence("Without length() we are counting length: "));
+
+        System.out.println(upperCase("om rajput"));
         System.out.println(reverse1("Om"));
         System.out.println(reverse2("Rajput"));
         System.out.println(palindrome("racecar"));
@@ -89,52 +134,52 @@ public class BasicsStrings {
         printStr("Om Rajput");
         System.out.println("Without length() we are counting length: "+getNum("Om Rajput"));
 
-//        String firstName = "Om";
-//        String lastName = new String("Barabhai");
-//        System.out.println(firstName+" "+lastName);
-//        System.out.println(firstName.length());
-//        System.out.println(firstName.charAt(0));
-//        System.out.println(firstName.charAt(1));
-//        System.out.println(lastName.charAt(2));
-//        System.out.println(lastName.length());
-//        String str = "Om";
-//        String str2 = "OM";
-//        System.out.println(str.equals(str2));
-//        System.out.println(str.equalsIgnoreCase(str2));
-//        String st = "   ";
-//        System.out.println(st.isBlank());
-//        System.out.println(st.isEmpty());
-//        String str3 = "   Om   ";
-//        System.out.println(str3.length());
-//        str3= str3.trim();
-//        System.out.println(str3);
-//        System.out.println(str3.length());
-//        String upperCase = "OM";
-//        String lowerCase = "om";
-//        System.out.println(upperCase.toUpperCase());
-//        System.out.println(lowerCase.toLowerCase());
-//
-//        String myName = "My Name is Om";
-//        System.out.println("startwith: "+myName.startsWith("My Name is Om"));
-//        System.out.println("endWith: "+myName.endsWith("Om"));
-//
-//        System.out.println(myName.substring(3,7));
-//        System.out.println(myName.contains("Om"));
-//
-//        int num = 5123;
-//        String valueOf = String.valueOf(num);
-//        System.out.println(num+1);
-//        System.out.println(valueOf+2);
-//
-//        String name = "My Name is Om";
-//        char[] crr = name.toCharArray();
-//        int idx = 0;
-//        for (char ch : crr){
-//            System.out.println("Value of char At Index "+idx+" : "+ch);
-//            idx++;
-//        }
+        String firstName = "Om";
+        String lastName = new String("Barabhai");
+        System.out.println(firstName+" "+lastName);
+        System.out.println(firstName.length());
+        System.out.println(firstName.charAt(0));
+        System.out.println(firstName.charAt(1));
+        System.out.println(lastName.charAt(2));
+        System.out.println(lastName.length());
+        String str = "Om";
+        String str2 = "OM";
+        System.out.println(str.equals(str2));
+        System.out.println(str.equalsIgnoreCase(str2));
+        String st = "   ";
+        System.out.println(st.isBlank());
+        System.out.println(st.isEmpty());
+        String str3 = "   Om   ";
+        System.out.println(str3.length());
+        str3= str3.trim();
+        System.out.println(str3);
+        System.out.println(str3.length());
+        String upperCase = "OM";
+        String lowerCase = "om";
+        System.out.println(upperCase.toUpperCase());
+        System.out.println(lowerCase.toLowerCase());
 
-//
+        String myName = "My Name is Om";
+        System.out.println("startwith: "+myName.startsWith("My Name is Om"));
+        System.out.println("endWith: "+myName.endsWith("Om"));
+
+        System.out.println(myName.substring(3,7));
+        System.out.println(myName.contains("Om"));
+
+        int num = 5123;
+        String valueOf = String.valueOf(num);
+        System.out.println(num+1);
+        System.out.println(valueOf+2);
+
+        String name = "My Name is Om";
+        char[] crr = name.toCharArray();
+        int idx = 0;
+        for (char ch : crr){
+            System.out.println("Value of char At Index "+idx+" : "+ch);
+            idx++;
+        }
+
+
 
 
 
