@@ -1,4 +1,4 @@
-package Basics_Java.OOPS;
+package Basics_Java.OOPS.Encapsulation;
 
 public class App {
     public static void main(String[] args) {

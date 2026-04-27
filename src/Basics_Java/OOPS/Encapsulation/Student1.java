@@ -1,4 +1,4 @@
-package Basics_Java.OOPS;
+package Basics_Java.OOPS.Encapsulation;
 
 public class Student1 {
     public int rollNo;
