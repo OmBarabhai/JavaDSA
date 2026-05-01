@@ -1,7 +1,6 @@
 package Basics_Java.Collections.HashMap;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class HashMapBasics {
 
@@ -32,5 +31,18 @@ public class HashMapBasics {
         map.putIfAbsent("in", "Indonasia");
 
         System.out.println(table);
+
+        Set<String> keySet = table.keySet();
+        System.out.println(keySet);
+        Collection<String> valueCollection = table.values();
+        System.out.println(valueCollection);
+        Set<Map.Entry<String,String>> entrySet = table.entrySet();
+        System.out.println(entrySet);
+
+        Map<String,String> map1 =new TreeMap<>();
+        map1.putAll(map);
+        for(Map.Entry<String,String> entry : map1.entrySet()){
+            System.out.println("Key: "+ entry.getKey()+ ", Value: "+entry.getValue());
+        }
     }
 }
