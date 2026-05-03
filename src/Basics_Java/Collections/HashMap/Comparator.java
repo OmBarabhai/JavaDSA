@@ -27,6 +27,8 @@ Comparable).
         students.add(new Student(22, "Om", 58));
         System.out.println("Before Sort: "+students);
 //        Collections.sort(students, (a,b) -> b.age - a.age);
+        Collections.sort(students,(a,b)-> Integer.compare(b.age,a.age));
+
         /// ascending
         students.sort(java.util.Comparator.comparing(Student::getAge));
         System.out.println("Ascending: "+ students);
