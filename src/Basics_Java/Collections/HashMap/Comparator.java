@@ -54,6 +54,10 @@ class Student  {
         this.weight = weight;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public int getAge() {
         return age;
     }
@@ -61,10 +65,6 @@ class Student  {
     public int getWeight() {
         return weight;
 
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void setAge(int age) {
